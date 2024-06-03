@@ -1,0 +1,19 @@
+server:
+    port: 8080
+
+spring:
+    datasource:
+        url: jdbc:postgres://postgres1:LKpylvF09jWaw5gVHEkCbzfeFmyIHLl3@dpg-cperjhfsc6pc73a314g0-a/fatecjava_k070
+        driver-class-name: org.postgresql.Driver
+        initialize: true
+
+    jpa: 
+        hibernate:
+            ddl-auto: create-drop
+            generate-ddl: true
+
+    sql:
+        init:
+            schema-locations: classpath:/schema-postgresql.sql
+            mode: always
+            platform: postgres
